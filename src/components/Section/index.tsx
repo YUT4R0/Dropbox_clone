@@ -1,11 +1,23 @@
 import React from 'react';
+import { Container, Content } from './styles';
+import Header from '../Header';
 
-import { Container } from './styles';
+interface Props {
+  variant: 'blue' | 'yellow' | 'white' | 'black'
+  title: string
+  description: string
+}
 
-const Section: React.FC = () => {
+const Section: React.FC<Props> = ({ variant, description, title }) => {
   return (
-    <Container>
-      <h1>penis</h1>
+    <Container className={variant}>
+
+      <Header />
+
+      <Content>
+        <h2>{title}</h2>
+        <p>{description}</p>
+      </Content>
     </Container>
   );
 }
