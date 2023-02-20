@@ -1,6 +1,8 @@
 import Section from "./components/Section";
 import data from "./data";
 import GlobalStyles from "./styles/GlobalStyles";
+import SideMenu from "./components/SideMenu";
+import MenuForm from "./components/MenuForm";
 
 function App() {
   return (
@@ -32,6 +34,10 @@ function App() {
       description={data[4].description}
       />
 
+      <SideMenu>
+        <MenuForm />
+      </SideMenu>
+      
       <GlobalStyles />
     </>
   );

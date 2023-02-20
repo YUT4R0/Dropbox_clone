@@ -6,6 +6,12 @@ const Header: React.FC = () => {
 
   const buttonVariant = Math.round(Math.random()) 
 
+  const handleToggle = () => {
+    if (window.toggleActiveMenu) {
+      window.toggleActiveMenu();   
+    }
+  }
+
   return (
     <HeadWrapper>
         <Head>
@@ -14,7 +20,7 @@ const Header: React.FC = () => {
               <span>DripBosta</span>
             </h1>
 
-            <button>{buttonVariant === 1 ? 'Interact' : 'Associate'}</button>
+            <button onClick={handleToggle} >{buttonVariant === 1 ? 'Interact' : 'Associate'}</button>
         </Head>
   </HeadWrapper>
   );
